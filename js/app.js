@@ -35,6 +35,8 @@ const chevron_down = document.querySelector(".chevron-head");
 
 // Reset User
 let currentUser = null;
+let ascending = true;
+
 
 // Fetch Data
 async function validationUser(username, password) {
@@ -111,14 +113,8 @@ function loadDashboard() {
     )
     .toLocaleString();
 
-  total_withdraw.innerHTML = user.transactions.reduce(
-    (acc, curr) =>
-      (acc +=
-        curr.type === "withdrawal" && curr.status === "Successful"
-          ? curr.amount
-          : 0),
-    0
-  );
+  total_withdraw.innerHTML = user.transactions.reduce((acc, curr) => (curr.type === "withdrawal" && curr.status === "Successful" ? acc + curr.amount : acc), 0)
+  .toLocaleString(); //Fixed : correct formatting
 
   // Transactions sorted
   const sorted = [...user.transactions].sort((a, b) => {
@@ -216,7 +212,6 @@ btn_withdraw.addEventListener("click", (e) => {
 });
 
 // Chevron-down Action
-let ascending = true;
 chevron_down.addEventListener("click", (e) => {
   ascending = !ascending;
   chevron_down.classList.toggle("chevron-head-table", !ascending);
