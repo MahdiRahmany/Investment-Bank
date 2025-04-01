@@ -138,3 +138,10 @@
   padding-left: var(--padding-panel-right);
 }
 /* End User Panel */
+
+/* Responsive for Mobile */
+@media screen and (max-width: 600px) {
+  .user-panel {
+    grid-template-columns: 1fr;
+  }
+}
