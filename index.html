@@ -3,8 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/imgs/logos.png" />
+
+    <!-- CSS Link -->
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/profile.css" />
+
     <title>Investment Bank</title>
   </head>
   <body>
@@ -14,48 +29,124 @@
         <!-- Start title Form -->
         <p class="text-login">Login to your account</p>
         <!-- End title Form -->
+
         <!-- Start username Input -->
         <div class="username">
           <input
             type="text"
             placeholder="Inter Your Username"
             class="input-username"
+            id="input-username"
+            autocomplete="off"
           />
         </div>
         <!-- End username Input -->
+
         <!-- Start password Input -->
         <div class="password">
           <input
             type="password"
             placeholder="Inter Your password"
             class="input-password"
+            id="input-password"
           />
         </div>
         <!-- End password Input -->
+
         <!-- Start btn -->
         <div class="btn">
           <button class="form-btn">Go to your account</button>
         </div>
         <!-- End btn -->
+
+        <div class="message"></div>
       </form>
     </div>
     <!-- end login-form -->
 
     <!-- Start User Panel -->
     <div class="user-panel">
-      <div class="info__user-panel">person info</div>
-      <div class="badge__user-panel">
-        <p>badge1</p>
-        <p>badge1</p>
-        <p>badge1</p>
-        <p>badge1</p>
-        <p>badge1</p>
-        <p>badge1</p>
+      <!-- Start --- Top List --- User Information -->
+      <div class="info__user-panel">
+        <div class="user-info">
+          <div class="user-info__left">
+            <div class="fullName"></div>
+            <div class="email"></div>
+          </div>
+          <button class="btn-logout">Logout</button>
+        </div>
+        <div class="user-detail">
+          <div class="user-detail__left">
+            <span>Id:</span>
+            <div class="id"></div>
+            <div class="joinDate"></div>
+          </div>
+          <div class="user-info__right">
+            <span>Balance:</span>
+            <div class="balance"></div>
+          </div>
+        </div>
       </div>
-      <div class="change__user-panel">edit</div>
+      <!-- End --- Top List --- User Information -->
+
+      <!-- Start --- Left List --- User Transactions -->
+      <div class="badge__user-panel">
+        <table class="badge-table">
+          <thead>
+            <tr>
+              <th class="table-head">Type</th>
+              <th class="table-head chevron-head">
+                <i class="fa-solid fa-chevron-down"></i>
+                Amount
+              </th>
+              <th class="table-head">Date</th>
+              <th class="table-head">Description</th>
+              <th class="table-head">Status</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+
+        <table class="calculate">
+          <thead class="thead-calc">
+            <tr>
+              <th>Total</th>
+              <th>Deposit</th>
+              <th>Withdraw</th>
+            </tr>
+          </thead>
+          <tbody class="tbody-calc">
+            <tr>
+              <td class="total-calc"></td>
+              <td class="total-deposit"></td>
+              <td class="total-withdraw"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- End --- Left List --- User Transactions -->
+
+      <!-- Start --- Right List --- Change -->
+      <div class="change__user-panel">
+        <!-- Deposit -->
+        <div class="deposit">
+          <input type="number" class="input-deposit" placeholder="Deposit..." />
+          <button class="btn-transaction btn-deposit">Transaction</button>
+        </div>
+        <!-- Withdraw -->
+        <div class="withdraw">
+          <input
+            type="number"
+            class="input-withdraw"
+            placeholder="Withdraw..."
+          />
+          <button class="btn-transaction btn-withdraw">Transaction</button>
+        </div>
+      </div>
+      <!-- End --- Right List --- Change -->
     </div>
     <!-- End User Panel -->
 
-    <script src="./app.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

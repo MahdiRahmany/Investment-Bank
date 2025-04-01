@@ -3,134 +3,134 @@
     {
       "username": "user1",
       "password": "pass1",
-      "fullName": "علی احمدی",
+      "fullName": "Ali Ahmadi",
       "email": "ali@example.com",
       "joinDate": "2023-01-01",
       "accountNumber": "ACC001",
-      "balance": 1000,
+      "balance": 1300,
       "transactions": [
         {
           "transactionId": "TXN001",
           "type": "deposit",
           "amount": 500,
           "date": "2023-10-01",
-          "description": "شارژ حساب",
-          "category": "درآمد",
-          "status": "موفق"
+          "description": "Account Charge",
+          "category": "Income",
+          "status": "Successful"
         },
         {
           "transactionId": "TXN002",
           "type": "withdrawal",
           "amount": 200,
           "date": "2023-10-02",
-          "description": "پرداخت آنلاین",
-          "category": "خرید",
-          "status": "موفق"
+          "description": "Online Payment",
+          "category": "Purchase",
+          "status": "Successful"
         }
       ]
     },
     {
       "username": "user2",
       "password": "pass2",
-      "fullName": "مریم محمدی",
+      "fullName": "Maryam Mohammadi",
       "email": "maryam@example.com",
       "joinDate": "2023-02-15",
       "accountNumber": "ACC002",
-      "balance": 2000,
+      "balance": 3700,
       "transactions": [
         {
           "transactionId": "TXN003",
           "type": "deposit",
           "amount": 1000,
           "date": "2023-09-15",
-          "description": "دریافت هدیه",
-          "category": "درآمد",
-          "status": "موفق"
+          "description": "Gift Received",
+          "category": "Income",
+          "status": "Successful"
         },
         {
           "transactionId": "TXN004",
           "type": "deposit",
           "amount": 1000,
           "date": "2023-09-20",
-          "description": "واریز حقوق",
-          "category": "درآمد",
-          "status": "موفق"
+          "description": "Salary Deposit",
+          "category": "Income",
+          "status": "Successful"
         },
         {
           "transactionId": "TXN005",
           "type": "withdrawal",
           "amount": 300,
           "date": "2023-09-25",
-          "description": "پرداخت قبض برق",
-          "category": "پرداخت قبض",
-          "status": "در انتظار"
+          "description": "Electricity Bill Payment",
+          "category": "Bill Payment",
+          "status": "Pending"
         }
       ]
     },
     {
       "username": "user3",
       "password": "pass3",
-      "fullName": "رضا رضایی",
+      "fullName": "Reza Rezaee",
       "email": "reza@example.com",
       "joinDate": "2023-03-10",
       "accountNumber": "ACC003",
-      "balance": 1500,
+      "balance": 2000,
       "transactions": [
         {
           "transactionId": "TXN006",
           "type": "deposit",
           "amount": 700,
           "date": "2023-10-05",
-          "description": "واریز حقوق",
-          "category": "درآمد",
-          "status": "موفق"
+          "description": "Salary Deposit",
+          "category": "Income",
+          "status": "Successful"
         },
         {
           "transactionId": "TXN007",
           "type": "withdrawal",
           "amount": 200,
           "date": "2023-10-06",
-          "description": "خرید مواد غذایی",
-          "category": "خرید",
-          "status": "موفق"
+          "description": "Grocery Shopping",
+          "category": "Purchase",
+          "status": "Successful"
         }
       ]
     },
     {
       "username": "user4",
       "password": "pass4",
-      "fullName": "سارا کریمی",
+      "fullName": "Sara Karimi",
       "email": "sara@example.com",
       "joinDate": "2023-04-20",
       "accountNumber": "ACC004",
-      "balance": 2500,
+      "balance": 3500,
       "transactions": [
         {
           "transactionId": "TXN008",
           "type": "deposit",
           "amount": 1000,
           "date": "2023-09-10",
-          "description": "دریافت هدیه",
-          "category": "درآمد",
-          "status": "موفق"
+          "description": "Gift Received",
+          "category": "Income",
+          "status": "Successful"
         },
         {
           "transactionId": "TXN009",
           "type": "deposit",
           "amount": 1500,
           "date": "2023-09-15",
-          "description": "واریز حقوق",
-          "category": "درآمد",
-          "status": "موفق"
+          "description": "Salary Deposit",
+          "category": "Income",
+          "status": "Successful"
         },
         {
           "transactionId": "TXN010",
           "type": "withdrawal",
           "amount": 500,
           "date": "2023-09-20",
-          "description": "پرداخت اجاره",
-          "category": "پرداخت",
-          "status": "در انتظار"
+          "description": "Rent Payment",
+          "category": "Payment",
+          "status": "Pending"
         }
       ]
     }

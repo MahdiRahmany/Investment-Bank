@@ -9,9 +9,11 @@
   --main-margin-bottom: 12px;
   --main-font: "Roboto";
   --main-color: #fbf5f5;
-  --second-color: #1d1d1d;
+  --second-color: #363636;
   --padding: 5px;
   --padding-panel: 14px;
+  --border-radius: 5px;
+  --padding-panel-right: 8px;
 }
 
 /* Reset Style */
@@ -31,7 +33,7 @@ body {
 /* Start Form Input */
 
 .login-form {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -41,10 +43,10 @@ body {
 .form {
   backdrop-filter: blur(5px);
   width: 400px;
-  height: 180px;
+  max-height: 250px;
   padding: 13px;
-  border-radius: 8px;
-  box-shadow: 3px 3px 8px var(--second-color);
+  border-radius: var(--border-radius);
+  box-shadow: 3px 3px 20px #2748b5;
 }
 
 /* Title Form */
@@ -65,53 +67,41 @@ body {
 .input-username,
 .input-password {
   font-family: var(--main-font);
-  padding: var(--padding);
   margin-bottom: var(--main-margin-bottom);
   background-color: transparent;
   border: 1px solid var(--second-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   width: 70%;
   color: var(--main-color);
   font-family: var(--main-font);
+  padding-left: 8px;
 }
 
-::placeholder {
+.input-username::placeholder,
+.input-password::placeholder {
   color: var(--main-color);
-  padding-left: 5px;
 }
 
 /* Button */
 .form-btn {
   border: 1px solid var(--second-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   padding: var(--padding);
   width: 70%;
   color: var(--main-color);
   background-color: #ad71713f;
   font-family: var(--main-font);
   cursor: pointer;
+  margin-bottom: var(--main-margin-bottom);
+}
+
+/* Message */
+.message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 14px;
 }
 
 /* End Login Form */
-
-/* Start User Panel */
-.user-panel {
-  padding: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.info__user-panel,
-.badge__user-panel,
-.change__user-panel {
-  padding: var(--padding-panel);
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px #cfc3c3;
-  background-color: var(--main-color);
-}
-
-.info__user-panel {
-  grid-column: 1/-1;
-}
-/* End User Panel */
