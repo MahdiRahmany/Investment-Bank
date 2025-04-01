@@ -1,0 +1,140 @@
+/* Start User Panel */
+
+/* Main Setting */
+.user-panel {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 25px;
+  color: var(--second-color);
+}
+
+.info__user-panel,
+.badge__user-panel,
+.change__user-panel {
+  padding: var(--padding-panel);
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #cfc3c3;
+  background-color: var(--main-color);
+}
+
+.info__user-panel {
+  grid-column: 1/-1;
+}
+
+/* Top List --- User Information */
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user-info__left,
+.user-info__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-logout {
+  border-radius: var(--border-radius);
+  padding: 2px 7px;
+  border: none;
+  color: var(--second-color);
+  background-color: #cfc3c3;
+  box-shadow: 3px 3px 5px #cfc3c3;
+  cursor: pointer;
+}
+
+.user-detail__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.email,
+.joinDate {
+  color: #80808080;
+  font-size: 12px;
+}
+
+/* Left List --- User Transactions */
+.badge-table,
+.calculate {
+  min-width: 100%;
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-size: 0.8rem;
+}
+
+.badge-table {
+  margin-bottom: 12px;
+}
+
+.table-head,
+.table-body,
+.thead-calc th {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+.chevron-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  border: none;
+}
+
+.chevron-head i {
+  transition: transform 0.3s;
+}
+
+.chevron-head-table i {
+  transform: rotate(180deg);
+}
+
+.tbody td,
+.tbody-calc td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Right List --- Deposit & Withdraw */
+
+.deposit {
+  margin-bottom: var(--padding-panel);
+}
+.input-deposit,
+.input-withdraw {
+  min-width: calc(100% - 93px);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--padding-panel-right);
+  margin-right: 5px;
+}
+
+.btn-transaction {
+  border-radius: var(--border-radius);
+  padding: var(--padding-panel-right);
+  cursor: pointer;
+  max-width: 84px;
+  border: none;
+}
+
+.input-deposit,
+.input-withdraw {
+  padding-left: var(--padding-panel-right);
+}
+/* End User Panel */
