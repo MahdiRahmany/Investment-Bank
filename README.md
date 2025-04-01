@@ -19,7 +19,7 @@ A modern banking dashboard interface for managing investments, tracking transact
 - **Data Persistence**  
   - Local storage for transactions and user data.
 
-  ## 🛠️ Technologies  
+## 🛠️ Technologies  
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3  
 - **Styling**: CSS Grid, Flexbox, Custom Properties  
 - **Data Handling**: `localStorage`
