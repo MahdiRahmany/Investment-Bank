@@ -4,7 +4,7 @@ const login = document.querySelector(".login-form");
 const usernameInput = document.querySelector(".input-username");
 const passwordInput = document.querySelector(".input-password");
 const messageDiv = document.querySelector(".message");
-
+  
 // Top Dashboard
 const dashboard = document.querySelector(".user-panel");
 const fullName = document.querySelector(".fullName");
@@ -32,6 +32,11 @@ const btn_withdraw = document.querySelector(".btn-withdraw");
 
 // Chevron-down Sort
 const chevron_down = document.querySelector(".chevron-head");
+
+// dark mode code 
+const toggleButton = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+const body = document.body;
 
 // Reset User
 let currentUser = null;
@@ -239,3 +244,25 @@ window.addEventListener("load", () => {
     loadDashboard();
   }
 });
+
+
+// Toggle Light and Dark Mode
+// Load saved theme from localStorage
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+    themeIcon.textContent = "🌞"; // Sun icon in dark mode
+}
+
+toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    
+    if (body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+        themeIcon.textContent = "🌞"; // Sun for dark mode
+    } else {
+        localStorage.setItem("theme", "light");
+        themeIcon.textContent = "🌙"; // Moon for light mode
+    }
+});
+
+// end of Toggle Light and Dark Mode

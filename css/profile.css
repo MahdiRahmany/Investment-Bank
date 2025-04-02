@@ -5,7 +5,27 @@ tablet -> 768
 mobile -> 320 (small)
 
 */
+:root {
+  --main-margin-bottom: 12px;
+  --main-font: "Roboto";
+  --main-color: #fbf5f5;
+  --second-color: #363636;
+  --padding: 5px;
+  --padding-panel: 14px;
+  --border-radius: 5px;
+  --padding-panel-right: 8px;
+}
+/* dark mode theme */
+.dark-theme{
+  --main-color: #363636;
+  --second-color: #fbf5f5;
+}
 
+body{
+  background-color: var(--main-color);
+  transition: 1ms ease-in-out;
+}
+/* end of dark mode theme */
 
 /* Start User Panel */
 
@@ -64,6 +84,25 @@ mobile -> 320 (small)
   display: flex;
   justify-content: space-between;
 }
+
+/* darkmode changes start */
+.btn-modeChange{
+  border-radius: var(--border-radius);
+  padding: 2px 7px;
+  border: none;
+  color: var(--second-color);
+  background-color: var(--main-color);
+  box-shadow: 3px 3px 5px #cfc3c3;
+  cursor: pointer;
+  margin-bottom: var(--main-margin-bottom);
+}
+
+.div-darkmode{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* end of dark mode changes   */
 
 .btn-logout {
   border-radius: var(--border-radius);
