@@ -167,3 +167,8 @@ mobile -> 320 (small)
     grid-template-columns: 1fr;
   }
 }
+
+.dark-theme {
+  background-color: #222;
+  color: white;
+}

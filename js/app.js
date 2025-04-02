@@ -239,3 +239,30 @@ window.addEventListener("load", () => {
     loadDashboard();
   }
 });
+
+
+// For Dark Mode 
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeButton = document.querySelector(".dark-mode");
+  const darkModeIcon = document.getElementById("dark-mode-icon");
+
+  let isDarkMode = localStorage.getItem("darkMode") === "enabled";
+
+  const updateIcon = () => {
+      if (isDarkMode) {
+          darkModeIcon.src = "/imgs/sun.png";
+          document.body.classList.add("dark-theme"); 
+      } else {
+          darkModeIcon.src = "/imgs/night-mode.png"; 
+          document.body.classList.remove("dark-theme"); 
+      }
+  };
+
+  darkModeButton.addEventListener("click", () => {
+      isDarkMode = !isDarkMode;
+      localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
+      updateIcon();
+  });
+
+  updateIcon(); 
+});
