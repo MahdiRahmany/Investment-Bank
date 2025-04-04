@@ -104,4 +104,13 @@ body {
   font-size: 14px;
 }
 
+@media screen and (max-width: 450px){
+  .form {
+    margin: var(--padding-panel);
+  }
+  .badge-table th:last-child, .tbody td:last-child{
+    display: none;
+  }
+}
+
 /* End Login Form */
